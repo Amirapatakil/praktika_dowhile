@@ -30,16 +30,18 @@ void task2() {
   int? chislo = int.tryParse(stdin.readLineSync() ?? '');
   int count = 0;
   int sum = 0;
+  double arr = 1;
 
   while (chislo != 0) {
     count++;
     sum += chislo!;
+    arr = sum / count;
     print('Еще раз.\n');
     chislo = int.tryParse(stdin.readLineSync() ?? '');
   }
 
   print(
-      'Вы ввели правильное число!\nВы ввели $count разa и сумма всех чисел составляет $sum');
+      'Вы ввели правильное число!\nВы ввели $count разa и сумма всех чисел составляет $sum\nСреднее арифметическое составляет $arr');
 }
 
 // 3)Необходимо суммировать все нечётные целые числа в диапазоне, который введёт пользователь с клавиатуры.
